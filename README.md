@@ -1,6 +1,6 @@
 # AutoWaterPump
 
-##Libraries:
+## Libraries:
 
 ###  Node Red:
     1. node-red
@@ -13,7 +13,7 @@
 
 
 
-##Software:
+## Software:
   Rasberry Pie:
     1. VNC
     2.
