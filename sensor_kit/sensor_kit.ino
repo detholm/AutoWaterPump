@@ -3,6 +3,8 @@
 #include <BH1750.h>
 #include "DHT.h"
 
+#define NAME "DIDRIK"
+
 //defines
 #define DHTPIN 4
 #define DHTTYPE DHT11
@@ -25,7 +27,17 @@ void setup() {
 
   // scale
   scaleInstance.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
-  scaleInstance.set_scale(131.0f);
+  float scaleMult = 0;
+
+  if (NAME == "KOSTAS") {
+    scaleMult = 134.13f;
+  } else if (NAME == "DIDRIK") {
+    scaleMult = 131.0f;
+  } else if (NAME == "WILL") {
+    scaleMult = 135.747f;
+  }
+
+  scaleInstance.set_scale(scaleMult);
   scaleInstance.tare();
 
   //light
@@ -37,7 +49,7 @@ void setup() {
   //temp_humidity
   dht.begin();
 
-  Serial.println("scale|moisture|lux|humidity|temp");
+  Serial.println("name|scale|moisture|lux|humidity|temp");
 }
 
 void loop() {
@@ -62,9 +74,10 @@ void loop() {
   float temp = dht.readTemperature();
 
   // print order:
-  // scale|moisture|lux|humidity|temp
-
-  Serial.print(scale); 
+  // name|scale|moisture|lux|humidity|temp
+  Serial.print(NAME);
+  Serial.print("\t");
+  Serial.print(scale);
   Serial.print("\t");
   Serial.print(moisture);
   Serial.print("\t");
@@ -74,6 +87,6 @@ void loop() {
   Serial.print("\t");
   Serial.print(temp);
   Serial.println();
-  
+
   delay(DELAY_TIME_MS);
 }
