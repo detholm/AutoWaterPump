@@ -18,7 +18,7 @@ Open Arduino IDE and go to
 
 `Sketch -> Include Library -> Add .zip Library`
 
-Import each library from `Library/Arduino`.
+Import each library from `Libraries/Arduino`.
 
 
 ## Software:
