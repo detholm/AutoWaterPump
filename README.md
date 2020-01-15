@@ -1,19 +1,26 @@
 # AutoWaterPump
 
-## Libraries:
+## Dashboard:
 
-###  Node Red:
-    1. node-red
-    2. node-red-dashboard
-    3. node-red-node-serialport
-    4. node-red-node-tail
+### Node red
 
-###  Arduino:
-    If you download libraries from web unzip them, remove -master from folder name and rezip it to add in IDE
+Dependencies requried:
+1. node-red
+2. node-red-dashboard
+3. node-red-node-serialport
+4. node-red-node-tail
 
+
+## Sensors:
+
+### Arduino setup
+Open Arduino IDE and go to
+
+`Sketch -> Include Library -> Add .zip Library`
+
+Import each library from `Library/Arduino`.
 
 
 ## Software:
 ###  Rasberry Pie:
-    1. VNC
-    2.
+1. VNC
