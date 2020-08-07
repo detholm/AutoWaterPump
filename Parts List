@@ -1,0 +1,33 @@
+Parts List:
+
+
+PI:
+  Case
+  Power Cable
+  Pi 4 
+  SD Card
+  USB
+  
+Arduino:
+  Case
+  Power Cable
+  5v Power strip
+  Power relay (for pump)
+  
+Scale:
+  Plastic Plates - 2
+  Load sensors - 4
+  HX711 board
+
+
+
+Pump
+  Hose
+  Pump
+  
+  
+  
+Other
+  Light Sensor BH1750FVI
+  Temp/Humidity Sensor  DHT11
+  
